@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "0e863c62-8a25-45da-af86-16e4ef4bcc49",
+		"name": "E-Popet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Find All Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment/{{appointment_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment",
+								"{{appointment_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"01/01/2022\",\r\n    \"serviceType\": \"Checkup\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/appointment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/appointment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/appointment/{{appointment_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"appointment",
+								"{{appointment_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Find All Businesses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/business",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"business"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Business",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/business/{{business_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"business",
+								"{{business_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Business",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pet Avengers\",\r\n    \"address\": \"Avengers Tower\",\r\n    \"cpf\": \"Veterinary\",\r\n    \"businessType\": \"\",\r\n    \"servicesAvailable\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/business",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"business"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Business",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/business",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"business"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Business",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/business/{{business_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"business",
+								"{{business_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Find All Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/client",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/client/{{client_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"client",
+								"{{client_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carol Danvers\",\r\n    \"address\": \"Sword Base\",\r\n    \"cpf\": \"00000000000\",\r\n    \"dateOfBirth\": \"01/01/1960\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/client",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/client",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/client/{{client_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"client",
+								"{{client_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Find All Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Pet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pet/{{pet_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet",
+								"{{pet_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lockjaw\",\r\n    \"species\": \"Inhuman Bulldog\",\r\n    \"sizeType\": \"Large\",\r\n    \"dateOfBirth\": \"01/12/1965\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pet",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pet/{{pet_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pet",
+								"{{pet_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Plan",
+			"item": [
+				{
+					"name": "Find All Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Plan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/plan/{{plan_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plan",
+								"{{plan_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"StarkPremium\",\r\n    \"description\": \"Plan with everything available.\",\r\n    \"monthlyPrice\": \"100.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Plan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/plan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Plan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/plan/{{plan_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"plan",
+								"{{plan_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
