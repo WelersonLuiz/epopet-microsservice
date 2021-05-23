@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -18,21 +17,15 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "APPOINTMENT")
-public class Appointment extends DefaultModel {
+@Table(name = "BUSINESS_PLAN")
+public class BusinessPlan extends DefaultModel {
 
-    @Column(name = "appointment_date")
-    private String appointmentDate;
-
-    @Column(name = "service_type")
-    private String serviceType;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_plan", referencedColumnName = "id")
+    private Plan plan;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_business", referencedColumnName = "id")
     private Business business;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_pet", referencedColumnName = "id")
-    private Pet pet;
 
 }
