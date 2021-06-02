@@ -6,6 +6,7 @@ import com.fatec.epopet.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
@@ -27,7 +28,13 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Client post(Client entity) {
-        return clientRepository.save(entity);
+        try {
+            getByEmail(entity.getEmail());
+        } catch (EntityNotFoundException e){
+            return clientRepository.save(entity);
+        }
+
+        throw new EntityExistsException();
     }
 
     @Override
@@ -40,7 +47,9 @@ public class ClientServiceImpl implements ClientService {
         clientRepository.deleteById(id);
     }
 
-    public List<Client> findProductsById(Integer id){
-        return clientRepository.findClientsById(id);
+    @Override
+    public Client getByEmail(String email) {
+        return clientRepository.findByEmail(email).orElseThrow(EntityNotFoundException::new);
     }
+
 }

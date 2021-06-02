@@ -4,6 +4,7 @@ import com.fatec.epopet.model.entity.Business;
 import com.fatec.epopet.service.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/business")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BusinessController{
 
     @Autowired
@@ -46,4 +48,5 @@ public class BusinessController{
     public void deleteById(@PathVariable Integer id) {
         businessService.deleteById(id);
     }
+
 }

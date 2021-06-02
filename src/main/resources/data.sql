@@ -5,16 +5,18 @@ VALUES (1, 'Pet Avengers', 'The only option', '42,00');
 
 -- INSERT CLIENTS --
 
-INSERT INTO CLIENT (ID, ID_PLAN, NAME, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (1, 1, 'Tony Stark', 'Avengers Tower', '5', '29/03/1970');
-INSERT INTO CLIENT (ID, ID_PLAN, NAME, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (2, 1, 'Steve Rogers', 'Avengers Tower', '2', '');
-INSERT INTO CLIENT (ID, ID_PLAN, NAME, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (3, 1, 'Bruce Banner', 'Avengers Tower', '3', '');
-INSERT INTO CLIENT (ID, ID_PLAN, NAME, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (4, 1, 'Natasha Romanoff', 'Avengers Tower', '4', '');
-INSERT INTO CLIENT (ID, ID_PLAN, NAME, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (5, 1, 'Clint Barton', 'Avengers Tower', '5', '');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (1, 1, 'Tony Stark', 't.stark@avenger.com', '123', 'Avengers Tower', '5', '29/03/1970');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (2, 1, 'Steve Rogers', 's.rogers@avenger.com', 'capsicle', 'Avengers Tower', '', '');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (3, 1, 'Thor', 't.odinson@avenger.com', 'point-break', 'Avengers Tower', '', '');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (4, 1, 'Bruce Banner', 'b.banner@avenger.com', 'jolly-green', 'Avengers Tower', '', '');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (5, 1, 'Natasha Romanoff', 'n.romanoff@avenger.com', 'triple-imposter', 'Avengers Tower', '', '');
+INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
+VALUES (6, 1, 'Clint Barton', 'c.barton@avenger.com', 'legolas', 'Avengers Tower', '', '');
 
 -- INSERT PETS --
 

@@ -4,6 +4,7 @@ import com.fatec.epopet.model.entity.Appointment;
 import com.fatec.epopet.service.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/appointment")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AppointmentController{
 
     @Autowired
@@ -46,4 +48,5 @@ public class AppointmentController{
     public void deleteById(@PathVariable Integer id) {
         appointmentService.deleteById(id);
     }
+
 }

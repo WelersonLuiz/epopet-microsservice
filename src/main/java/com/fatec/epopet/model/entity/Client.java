@@ -28,6 +28,12 @@ public class Client extends DefaultModel {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "email", unique = true)
+    private String email;
+
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "address")
     private String address;
 

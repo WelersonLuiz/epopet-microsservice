@@ -4,6 +4,7 @@ import com.fatec.epopet.model.entity.Client;
 import com.fatec.epopet.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,12 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestControllerAdvice
+@RestController
 @RequestMapping(path = "/client")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClientController {
 
     @Autowired
@@ -28,8 +30,13 @@ public class ClientController {
     }
 
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Client getById(@PathVariable Integer id) throws Exception {
+    public Client getById(@PathVariable Integer id) {
         return clientService.getById(id);
+    }
+
+    @GetMapping(value = "/email/{email}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Client getByEmail(@PathVariable String email) {
+        return clientService.getByEmail(email);
     }
 
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -43,7 +50,8 @@ public class ClientController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public void deleteById(@PathVariable Integer id) throws Exception {
+    public void deleteById(@PathVariable Integer id) {
         clientService.deleteById(id);
     }
+
 }
