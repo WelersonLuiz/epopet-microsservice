@@ -22,7 +22,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "PET")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "appointmentList"})
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "appointmentList", "client"})
 public class Pet extends DefaultModel {
 
     @Column(name = "name")

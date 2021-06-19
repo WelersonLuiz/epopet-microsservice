@@ -34,6 +34,12 @@ public class PetController {
         return petService.getById(id);
     }
 
+
+    @GetMapping(value = "/client/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<Pet> getByClient(@PathVariable Integer id) {
+        return petService.findByIdClient(id);
+    }
+
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Pet post(@RequestBody Pet entity) {
         return petService.post(entity);
