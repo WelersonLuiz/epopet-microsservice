@@ -39,6 +39,11 @@ public class ClientController {
         return clientService.getByEmail(email);
     }
 
+    @GetMapping(value = "/cpf/{cpf}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Client getByCpf(@PathVariable String cpf) {
+        return clientService.getByCpf(cpf);
+    }
+
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Client post(@RequestBody Client entity) {
         return clientService.post(entity);
