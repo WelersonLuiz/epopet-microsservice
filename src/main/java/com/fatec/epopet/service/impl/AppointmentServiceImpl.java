@@ -26,6 +26,11 @@ public class AppointmentServiceImpl implements AppointmentService {
     }
 
     @Override
+    public List<Appointment> getByCustomerId(Integer id) {
+        return appointmentRepository.findByCustomerId(id);
+    }
+
+    @Override
     public Appointment post(Appointment entity) {
         return appointmentRepository.save(entity);
     }

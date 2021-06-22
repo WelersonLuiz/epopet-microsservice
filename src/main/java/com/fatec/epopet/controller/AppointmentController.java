@@ -34,6 +34,11 @@ public class AppointmentController{
         return appointmentService.getById(id);
     }
 
+    @GetMapping(value = "/client/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public List<Appointment> getByCustomerId(@PathVariable Integer id) {
+        return appointmentService.getByCustomerId(id);
+    }
+
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Appointment post(@RequestBody Appointment entity) {
         return appointmentService.post(entity);
