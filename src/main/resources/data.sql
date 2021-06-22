@@ -1,7 +1,11 @@
 -- INSERT PLANS --
 
 INSERT INTO PLAN (ID, NAME, DESCRIPTION, MONTHLY_PRICE)
-VALUES (1, 'Pet Avengers', 'The only option', '42,00');
+VALUES (1, 'Pigmeu', 'Com o Plano Pigmeu seu pet terá acesso a: Consultas e plantão Consultas virtuais Consultas de Urgência e Emergência Vacinas Exames laboratoriais Exames de imagem básicos Procedimentos clínicos Tudo isso por apenas R$ [] mensais!', '70,00');
+INSERT INTO PLAN (ID, NAME, DESCRIPTION, MONTHLY_PRICE)
+VALUES (2, 'Comum', 'Com o Plano Comum seu pet terá acesso a: Todos os benefícios do plano anterior Cirurgias Anestesia local e injetável Exames cardiovasculares Benefícios acrescidos por apenas R$ [] mensais!', '140,00');
+INSERT INTO PLAN (ID, NAME, DESCRIPTION, MONTHLY_PRICE)
+VALUES (3, 'Nilo', 'Com o Plano Nilo seu pet terá acesso a: Todos os benefícos dos planos anteriores Visitas a petshops Especialistas Internação, Todas as vantagens por apenas R$ [] mesais!', '180,00');
 
 -- INSERT CLIENTS --
 
