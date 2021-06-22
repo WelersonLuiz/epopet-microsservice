@@ -40,7 +40,9 @@ public class PetServiceImpl implements PetService {
         petRepository.deleteById(id);
     }
 
-    public List<Pet> findProductsById(Integer id){
-        return petRepository.findPetsById(id);
+    @Override
+    public List<Pet> findByIdClient(Integer id){
+        return petRepository.findByClientId(id);
     }
+
 }

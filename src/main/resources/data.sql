@@ -10,17 +10,17 @@ VALUES (3, 'Nilo', 'Com o Plano Nilo seu pet terá acesso a: Todos os benefícos
 -- INSERT CLIENTS --
 
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (1, 1, 'Tony Stark', 't.stark@avenger.com', '123', 'Avengers Tower', '5', '29/03/1970');
+VALUES (1, 1, 'Tony Stark', 't.stark@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '5', '29/03/1970');
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (2, 1, 'Steve Rogers', 's.rogers@avenger.com', 'capsicle', 'Avengers Tower', '', '');
+VALUES (2, 1, 'Steve Rogers', 's.rogers@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '', '');
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (3, 1, 'Thor', 't.odinson@avenger.com', 'point-break', 'Avengers Tower', '', '');
+VALUES (3, 1, 'Thor', 't.odinson@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '', '');
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (4, 1, 'Bruce Banner', 'b.banner@avenger.com', 'jolly-green', 'Avengers Tower', '', '');
+VALUES (4, 1, 'Bruce Banner', 'b.banner@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '', '');
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (5, 1, 'Natasha Romanoff', 'n.romanoff@avenger.com', 'triple-imposter', 'Avengers Tower', '', '');
+VALUES (5, 1, 'Natasha Romanoff', 'n.romanoff@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '', '');
 INSERT INTO CLIENT (ID, ID_PLAN, NAME, EMAIL, PASSWORD, ADDRESS, CPF, DATE_OF_BIRTH)
-VALUES (6, 1, 'Clint Barton', 'c.barton@avenger.com', 'legolas', 'Avengers Tower', '', '');
+VALUES (6, 1, 'Clint Barton', 'c.barton@avenger.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Avengers Tower', '', '');
 
 -- INSERT PETS --
 

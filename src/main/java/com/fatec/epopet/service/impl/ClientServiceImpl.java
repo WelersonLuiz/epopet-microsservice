@@ -52,4 +52,9 @@ public class ClientServiceImpl implements ClientService {
         return clientRepository.findByEmail(email).orElseThrow(EntityNotFoundException::new);
     }
 
+    @Override
+    public Client getByCpf(String cpf) {
+        return clientRepository.findByCpf(cpf).orElseThrow(EntityNotFoundException::new);
+    }
+
 }
