@@ -1,5 +1,6 @@
 package com.fatec.epopet.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fatec.epopet.model.DefaultModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,8 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Table(name = "APPOINTMENT")
+@JsonIgnoreProperties({"pet","business"})
+
 public class Appointment extends DefaultModel {
 
     @Column(name = "appointment_date")
@@ -27,12 +30,18 @@ public class Appointment extends DefaultModel {
     @Column(name = "service_type")
     private String serviceType;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_business", referencedColumnName = "id")
-    private Business business;
+    @Column(name = "id_business")
+    private String id_business;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_pet", referencedColumnName = "id")
+    @JoinColumn(name = "id_business", referencedColumnName = "id", updatable=false, insertable = false)
+    private Business business;
+
+    @Column(name = "id_pet")
+    private String id_pet;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pet", referencedColumnName = "id", updatable=false, insertable = false)
     private Pet pet;
 
 }

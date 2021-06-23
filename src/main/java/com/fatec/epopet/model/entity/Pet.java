@@ -37,8 +37,11 @@ public class Pet extends DefaultModel {
     @Column(name = "date_of_birth")
     private String dateOfBirth;
 
+    @Column(name = "id_client")
+    private String id_client;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_client", referencedColumnName = "id")
+    @JoinColumn(name = "id_client", referencedColumnName = "id", updatable=false, insertable = false)
     private Client client;
 
     @OneToMany(mappedBy="id", fetch = FetchType.LAZY)
